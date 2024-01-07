@@ -1,0 +1,25 @@
+section {
+   margin: 0.5em;
+   padding: 0.5em;
+   background-color: var(--color-primary-1-800);
+   width: 600px;
+}
+section div {
+   margin: 5px;
+   padding: 5px;;   
+   background-color: var(--color-primary-1-400);
+   font-weight: 400;
+   font-size: 2em;
+}
+
+/* first container uses flex */
+.container1 {
+   display: flex;
+   flex-wrap: wrap;
+}
+.container1 div {
+   flex: 1 1 150px;
+}
+
+/* second container uses grid */
+

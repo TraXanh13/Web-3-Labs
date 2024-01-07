@@ -1,0 +1,9 @@
+
+h1, h2 {
+   font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+   letter-spacing: 5px; 
+   text-transform: uppercase;
+   margin: 0 5px;
+}
+
+/* add styles after here */

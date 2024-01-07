@@ -1,0 +1,10 @@
+body, main, section, div, p, span {
+   margin: 30px;
+   padding: 5px;
+}
+body { background-color: #efd2c1; }
+main { background-color: #e5b699; }
+section { background-color: #d68a5c; }
+div { background-color: #b6612e; }
+p { background-color: #79411f; color: white;  padding: 30px;}
+span { background-color: #542437; color: white;  padding: 10px; display: inline-block; }

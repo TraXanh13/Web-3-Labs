@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab05</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lab05-ex15.css" >
+</head>
+<body>
+	<form>
+      <h1>Account Settings</h1>
+      <h2>User</h2>
+      <label for="email" class="blockedLabel">Email</label>
+      <input type="email" name="email" id="email" placeholder="a@bb" />
+      <button class="secondBtn">Change Password</button>
+      <label for="lang" class="blockedLabel">Language</label>
+      <select name="lang" id="email">
+            <option>English</option>
+            <option>French</option>
+            <option>Spanish</option>
+      </select>
+      <h2>Profile</h2>
+      <label for="first" class="blockedLabel">First Name</label>
+      <input type="text" name="first" id="first"/>
+      <label for="last" class="blockedLabel">Last Name</label>
+      <input type="text" name="last" id="last"/> 
+      <label for="about" class="blockedLabel">About</label>
+      <textarea name="about" id="about"></textarea>
+      <h2>Notifications</h2>
+      <h3>By Email</h3>
+      <ul>
+         <li><input type="checkbox" name="comments" id="comments" checked> <label for="comments" class="lineLabel">For comments</label></li>
+         <li><input type="checkbox" name="specials" id="specials" checked> <label for="specials" class="lineLabel">For special offers</label></li>
+      </ul>
+         
+      <h3>By Text Messages</h3>
+      <ul>
+         <li><input type="radio" name="push" id="pushA" checked> <label for="pushA" class="lineLabel">Same as Email</label></li>
+         <li><input type="radio" name="push" id="pushB" > <label for="pushB" class="lineLabel">No text messages</label></li>
+      </ul>
+      
+      <button class="primaryBtn">Save Settings</button> <button class="optionalBtn">Cancel</button>
+	</form>
+
+</body>
+</html>

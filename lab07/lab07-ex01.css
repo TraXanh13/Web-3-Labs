@@ -1,0 +1,51 @@
+body {
+  background-color: #F0F4F8;
+  padding: 1em;
+}
+header, footer {
+  background-color: #334E68;
+  color: #D9E2EC;
+  padding: 0.5em;
+}
+header a:link, footer a:link {
+  color: #38BEC9;
+}
+header h1 {
+  border-top: solid 1px #F0F4F8;
+  border-bottom: solid 1px #F0F4F8;
+  margin: 0;
+  padding: 0;
+}
+header ul {
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+main {
+  background-color: white;
+  padding: 1em;
+}
+button {
+  background-color: #87EAF2;
+  border: 0;
+  border-radius: 6px;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+}
+div.card {
+background-color: #F0F8FF;
+box-shadow: 3px 3px 3px 3px #BCCCDC;
+  padding: 0.25em;
+}
+h1 span {
+ background-color: #E668A7;
+ color: #87EAF2;
+ font-size: 1.25em;
+
+ display: inline;
+}
+
+/* add additional styles here */
+
+
+

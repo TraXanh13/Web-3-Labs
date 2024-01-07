@@ -1,0 +1,26 @@
+
+body {
+   background-color: #102A43;
+   color: #F0F4F8;
+   font-size: 36px;
+}
+section {
+   border: solid 1pt #627D98;
+   margin: 1em 5em;
+}
+
+.a {
+   background-color: hsl(42, 82%, 55%);
+}
+.b {
+   background-color: hsla(42, 82%, 55%, .8);
+   
+}
+.c {
+   background-color: hsla(42, 82%, 55%, .6);
+}
+.d {
+   background-color: hsla(42, 82%, 55%, .4);
+}
+
+/* add styles here */

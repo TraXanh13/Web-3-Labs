@@ -1,0 +1,38 @@
+body {
+   font-family: Open Sans, sans-serif;
+   background-color: #E9E9E9;
+   display: flex;
+   align-items: center;    
+   justify-content: center;
+   margin: 3em 4em;
+}
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 20em;
+   margin: 3em;
+}
+
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: stretch;
+   list-style: none;
+}
+.card {
+   flex: 0 0 250px;
+   margin: 3em;
+   border: 1px solid #ccc;
+   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+   background-color: white;
+} 
+
+img {
+   background: #F1F1FA;
+   width: 320px;
+   height: 240px;
+   display: block;
+   margin: 10px auto;
+   border: 0;
+ }

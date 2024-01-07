@@ -1,0 +1,21 @@
+body {
+   font-family: Georgia, Cambria, "Times New Roman", serif;  
+   font-weight: normal;
+   font-size: 12pt;
+   margin: 0;
+   padding: 10px;
+}
+
+/* you will be modifying the following styles */
+
+h1, h2, p, div, ul, li {
+   border: 2px dashed lightseagreen;
+}
+span, a, em {
+   border: 2px solid sienna;
+}
+img {
+   border: 2px solid sienna;
+
+}
+

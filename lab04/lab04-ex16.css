@@ -1,0 +1,29 @@
+body {
+   background-color: white;
+   margin:5px;
+   padding:0;
+}
+p {
+   font-family: 'Merriweather', serif;
+   margin: 5px;
+}
+div {
+   border-bottom: 1px solid gray;
+}
+
+#parent1 {
+
+}
+#parent2 {
+ 
+}
+
+.first {
+
+}
+.second {
+
+}
+.third {
+
+}

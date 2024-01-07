@@ -1,0 +1,97 @@
+ul, li, h1, h2, h3, aside, section, div, input[type="radio"] {
+   margin: 0;
+   padding: 0;
+}
+body {
+   background-color:  var(--color-neutral-050);   
+   color: var(--color-neutral-900);
+   padding: 2em;
+   font-family: Roboto, sans-serif;
+   font-weight: 300;   
+   font-size: 14px;   
+}
+h2, h3 { font-weight: 500;}
+h2 {
+   font-size: 22px;
+   margin: 1em 0;
+}
+h3 {
+   font-size: 16px;
+   margin: 1em 0;   
+}
+
+aside {
+   background-color:  var(--color-neutral-100);
+   padding: 0.5em;
+}
+#galleries li {
+   list-style: none;
+}
+aside input[type="radio"] {
+   margin-top: 0.5em;
+}
+aside input[type="search"] {
+   height: 2.5em;
+   padding: 0.25em;
+   color: var(--color-neutral-500)
+}
+#colorBoxes span {
+   width: 50px;
+   height: 50px;
+   margin: 0.25em;
+   display: inline-block;
+   cursor: pointer;
+}
+.color1 {
+   background-color: blue;
+}
+.color2 {
+   background-color: green;
+}
+.color3 {
+   background-color: red;
+}
+.color4 {
+   background-color: orange;
+}
+.color5 {
+   background-color: yellow;
+}
+.color6 {
+   background-color: purple;
+}
+
+section#results {
+   padding-left: 1em;
+}
+.card {
+   background-color: white;
+   box-shadow: 3px 3px 3px 3px var(--color-neutral-100);
+   padding: 10px;
+   text-align: center;
+}
+.card img {
+   width: 200px;
+}
+.card h2 {
+   font-weight: 300;
+   font-size: 16px;
+}
+button {
+   background-color: var(--color-primary-1-500);
+   color: var(--color-neutral-100);
+   font-weight: 500;
+   font-size: 16px;
+   border: 0;
+   border-radius: 3px;
+   height: 2em;
+   width: 70%;
+   display: inline-block;
+   margin-top: 0.5em;
+   cursor: pointer;
+}
+
+/* add your styles here */
+
+
+

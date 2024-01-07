@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: #11998e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #38ef7d,
+    #11998e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #38ef7d, #11998e);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.1em;
+}
+p {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside {
+  min-width: 400px;
+  min-height: 170px;
+  border-radius: 9px;
+  margin: 3em;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+}
+#email-signup {
+  height: 50px;
+  padding: 0px 5px 0px 10px;
+  width: 250px;
+  caret-color: #fc4e03;
+  background-color: white;
+  font-size: 20px;
+  color: #383838;
+  border-radius: 0.2rem;
+}
+#btn {
+  height: 50px;
+  background-color: #fc4e03;
+  border: none;
+  font-size: 18px;
+  border-radius: 0.2rem;
+  color: white;
+}
+#btn:hover {
+  background-color: #e34602;
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: flex;
+}

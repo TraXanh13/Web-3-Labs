@@ -1,0 +1,47 @@
+:root {
+   --gapSize: 0.5em;
+   --baseFontSize: 14px;
+   --is-size-2: calc(var(--baseFontSize) * 1.2);
+   --is-size-3: calc(var(--baseFontSize) * 1.4);
+   --is-size-4: calc(var(--baseFontSize) * 1.6);
+}
+
+body {
+   background-color:  var(--color-neutral-050);   
+   color: var(--color-neutral-900);
+   padding: 2em;
+   font-family: Roboto, sans-serif;
+   font-weight: 300;   
+   font-size: var(--baseFontSize);   
+}
+h2, h3 { font-weight: 500;}
+h2 {
+   font-size: var(--is-size-4);
+   margin: 1em 0;
+}
+
+.card {
+   background-color: white;
+   box-shadow: 3px 3px 3px 3px var(--color-neutral-100);
+   padding: var(--gapSize);
+   text-align: center;
+   width: 900px
+}
+.card h2 {
+   font-weight: 300;
+   font-size: var(--is-size-3);
+}
+button {
+   background-color: var(--color-primary-1-500);
+   color: var(--color-neutral-100);
+   font-weight: 500;
+   font-size: var(--is-size-2);
+   border: 0;
+   border-radius: 3px;
+   height: 2em;
+   width: 10em;
+   display: inline-block;
+   margin: 0.5em 0;
+   cursor: pointer;
+}
+

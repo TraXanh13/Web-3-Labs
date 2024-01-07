@@ -1,0 +1,15 @@
+section {
+   background-color: var(--color-primary-1-900);
+   margin: 1em;
+   width: 200px;
+   height: 200px;
+   font-size: 2em;
+}
+
+section div {
+   background-color: var(--color-primary-1-300);
+   width: 100px;
+   height: 100px;
+}
+
+/* add styles here */

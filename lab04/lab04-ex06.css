@@ -1,0 +1,11 @@
+body {
+   background-color: #E4E7EB;
+   padding: 10px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 16px;
+}
+ul { list-style-type: none; background-color: #A30664; color: #FFE3EC; padding: 0px;}
+li { padding: 10px; display: inline-block;}
+
+/* add styles after here */
+

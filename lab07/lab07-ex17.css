@@ -1,0 +1,56 @@
+:root {
+   --gapSize: 0.5em;
+   --paintingWidth: 100px;
+   --cardWidth: 200px;
+
+   --baseFontSize: 16px;
+
+   --is-size-2: calc(var(--baseFontSize) * 1.2);
+   --is-size-3: calc(var(--baseFontSize) * 1.4);
+   --is-size-4: calc(var(--baseFontSize) * 1.6);
+}
+
+ul, li, h1, h2, h3, aside, section, div, input[type="radio"] {
+   margin: 0;
+   padding: 0;
+}
+body {
+   background-color:  var(--color-neutral-100);   
+   color: var(--color-neutral-900);
+   padding: 2em;
+   font-family: Roboto, sans-serif;
+   font-weight: 300;   
+   font-size: var(--baseFontSize);   
+}
+
+section.container {
+   background-color: white;
+   margin: var(--gapSize) ;
+   padding: calc( var(--gapSize) * 4);
+   display: grid;
+   grid-column-gap: var(--gapSize);
+   grid-row-gap: calc( var(--gapSize) * 4);
+
+   grid-template-columns: repeat( auto-fill, minmax(var(--cardWidth), 1fr) );
+}
+
+.box h2 {
+   font-size: var(--is-size-3);
+   font-weight: 500;
+   margin-top: var(--gapSize) ;
+}
+
+.box button {
+   display: inline-block;
+   width:60%;
+
+   border: 0;
+   border-radius: calc( var(--baseFontSize) / 4);
+   background-color: var(--color-primary-1-500);
+   color: var(--color-neutral-100); 
+   padding: var(--gapSize);
+   font-size: var(--baseFontSize);   
+}
+
+/* add new styles below  */
+

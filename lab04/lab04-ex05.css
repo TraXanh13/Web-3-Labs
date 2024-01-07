@@ -1,0 +1,13 @@
+body {
+   background-color: #e6e9ed;
+   padding: 10px;
+}
+h1 {
+   font-size: 28px;
+}
+h2 {
+   font-size: 20px;
+}
+a { display: block; margin-top: 5px; color: #3D70B2; }
+
+/* add styles after here */

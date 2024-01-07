@@ -1,0 +1,22 @@
+section {
+   margin: 10px;
+   padding: 5px;
+   background-color: var(--color-primary-1-800);
+   width: 80%
+}
+section div {
+   margin: 5px;
+   padding: 5px;  
+   background-color: var(--color-primary-1-400);
+   font-weight: 400;
+   font-size: 2em;
+}
+
+.container {
+   display: grid;
+   gap: 10px;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(2,200px);
+}
+
+/* add styles here */

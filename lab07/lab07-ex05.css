@@ -1,0 +1,14 @@
+body {
+   background: white;
+   margin: 0;
+   padding: 0;
+}
+.media-body h2 { margin: 0;}
+.media {
+   background-color: #ECEFF1;
+   padding: 10px;
+   margin: 50px;
+   width: 500px;
+}
+
+/* Add styles here */

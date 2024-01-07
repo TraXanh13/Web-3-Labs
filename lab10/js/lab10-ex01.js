@@ -17,8 +17,30 @@ document.addEventListener('DOMContentLoaded', () => {
                      {id:8, title: "Balcony", artist: "Manet", year: 1868}];
 
 
-/* add code here */
+   /* add code here */
+   // Sorting a simple array
+   const sortedTitles = titles.sort();
+   console.log(sortedTitles);
 
+   // Sorting an array of objects
+
+   // const paintingsByYear = paintings.sort( function(a, b) {
+   //    if(a.year < b.year) {
+   //       return -1;
+   //    } else if(a.year > b.year) {
+   //       return 1;
+   //    } else {
+   //       return 0;
+   //    }
+   // })
+
+   /* This can be simplified using an arrow function and ternary operations */
+
+   const paintingsByYear = paintings.sort((a, b) => {
+      return a.year < b.year ? -1 : 1;
+   });
+
+   console.log(paintingsByYear);
 
 
 

@@ -36,9 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // uses filter and regular expression to create list of matching universities 
     function findMatches(wordToMatch, universities) { 
-    return universities.filter(obj => { 
-        const regex = new RegExp(wordToMatch, 'gi'); 
-        return obj.name.match(regex); 
-    }); 
+        return universities.filter(obj => { 
+            const regex = new RegExp(wordToMatch, 'gi'); 
+            return obj.name.match(regex); 
+        }); 
     }
+    console.log("hi")
 });

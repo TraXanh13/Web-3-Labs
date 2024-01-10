@@ -8,17 +8,18 @@ document.addEventListener("DOMContentLoaded", function() {
    const movies = [];
 
    // hide form and display loading animation
-
-    
-
-   // fetch from API will populate this empty array using spread operator
-   fetch(endpoint)
-     .then(response => response.json())
-     .then(data => {
-         // show form and hide animation
-       
-         movies.push(...data);
-
+   document.querySelector("form.box").style.display = "none";  
+   document.querySelector("#movieLoading").style.display = "block";
+   
+   
+  // fetch from API will populate this empty array using spread operator
+  fetch(endpoint)
+  .then(response => response.json())
+  .then(data => {
+    // show form and hide animation
+    document.querySelector("form.box").style.display = "block";  
+    document.querySelector("#movieLoading").style.display = "none";
+    movies.push(...data);
      } )
      .catch(error => console.error(error));
 

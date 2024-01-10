@@ -8,7 +8,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
    // first hide loaders and main element 
- 
+   let loaders = document.querySelectorAll(".lds-ring");
+   loaders.forEach((x) => {
+      x.style.display = "none";
+   });
+
+   document.querySelector("main").style.display = "none";
+
    // then handle button click 
 
 
@@ -16,7 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
    /* -------------------------------------------------------------
       When button is clicked, fetch data and populate select element 
    */
-
+   document.addEventListener("click", (e) => {
+      if(e.target.id === "fetchButton"){
+         console.log(e.target.id);
+      }
+   });
 
    /* -------------------------------------------------------------
       When user selects, fetch data and display images

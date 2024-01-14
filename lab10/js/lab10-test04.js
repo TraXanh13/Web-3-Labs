@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
    
    const imageURL = 'https://www.randyconnolly.com/funwebdev/3rd/images/travel/square150/';   
    
-   
-   
+   async function parallelPromises() {
+      
+   }
+
+
 });

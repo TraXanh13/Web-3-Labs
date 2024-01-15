@@ -8,9 +8,30 @@ document.addEventListener("DOMContentLoaded", function() {
    
    const imageURL = 'https://www.randyconnolly.com/funwebdev/3rd/images/travel/square150/';   
    
-   async function parallelPromises() {
-      
+   // Returns a promise
+   async function getPromise(url) {
+      try {
+         const res = await fetch(url);
+         const data = res.json();
+         return data;
+      } catch (err) {
+         console.log(err)
+      }
    }
 
 
+   async function parallelPromises() {
+      let countryPromise = getPromise(countryAPI);
+      let cityPromise = getPromise(cityAPI);
+      let continenetPromise = getPromise(continentAPI);
+      let userPromise = getPromise(userAPI);
+      let photoPromise = getPromise(photoAPI);
+
+      Promise.all([countryPromise, cityPromise, continenetPromise, userPromise, photoPromise])
+         .then((values) => {
+            console.log(values[2]);
+         })
+   }
+
+   parallelPromises();
 });

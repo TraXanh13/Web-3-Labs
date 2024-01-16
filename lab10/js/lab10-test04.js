@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
          populateContinents(values[2]);
          populateUsers(values[3]);
       })
-      
+
       document.querySelector("main").style.display = "inline-block";
       document.querySelector("#loader1").style.display = "none";
    });
@@ -134,33 +134,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
    async function getPhotos(url) {
       const res = await fetch(url);
-      const data = res.json();
+      const data = await res.json();
       return data;
+   }
 
-      // fetch(url)
-      // .then(res => res.json())
-      // .then(data => {
-      //    console.log(data);
-
-      //    const imgSection = document.querySelector("#results")
-      //    imgSection.replaceChildren();
+   function populatePhotos(photos) {
+      const imgSection = document.querySelector("#results")
+      imgSection.replaceChildren();
+      
+      document.querySelector("#loader2").style.display = "inline-block";
+      imgSection.style.display = "none"
+   
+      photos.forEach((photo) => {
+         const img = document.createElement("img");
          
-      //    document.querySelector("#loader2").style.display = "inline-block";
-      //    imgSection.style.display = "none"
-
-      //    data.forEach((x) => {
-      //       const img = document.createElement("img");
-            
-      //       img.src = imageURL + x.filename;
-      //       img.title = x.title;
-      //       img.alt = x.title;
-            
-      //       imgSection.appendChild(img);
-      //    });
-
-      //    document.querySelector("#loader2").style.display = "none";
-      //    imgSection.style.display = "block"
-      // }) 
+         img.src = imageURL + photo.filename;
+         img.title = photo.title;
+         img.alt = photo.title;
+         
+         imgSection.appendChild(img);
+      });
+   
+      document.querySelector("#loader2").style.display = "none";
+      imgSection.style.display = "block"
    }
    
    document.body.addEventListener("change", async (e) => {
@@ -182,10 +178,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       clearOtherFilters(e.target.id);
-      let photos = await getPhotos(photoUrl);
-
-      photos.forEach(p => {
-         console.log(p);
-      })
+      populatePhotos(await getPhotos(photoUrl));
    })
 });

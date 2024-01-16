@@ -60,8 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
       sortedUsers.forEach((user) => {
          const option = document.createElement("option");
          option.value = user.id;
-
-         console.log(user);
       })      
    }
 

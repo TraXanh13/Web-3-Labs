@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() { 
     
     // try retrieving from storage or initialize to empty array if doesn't exist
-    const schemeCollection = JSON.parse(localStorage.getItem('schemes')) || [];
+    const schemeCollection = JSON.parse(sessionStorage.getItem('schemes')) || [];
     
     if (schemeCollection.length > 0) {
         // try retrieving query string

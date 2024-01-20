@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const schemeGroup = document.querySelector('article.scheme-group');
     
     // holds collection of user-created schemes ...
-    let schemeCollection = [];
+    let schemeCollection = retrieveStorage();
     
     // set up event handlers
     setUpColorHandlers();
@@ -24,17 +24,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // update storage with revised collection
     function updateStorage() {
-
+        sessionStorage.setItem('schemes', JSON.stringify(schemeCollection));
     }
     
     // retrieve from storage or return empty array if doesn't exist
     function retrieveStorage() {        
-
+        return JSON.parse(sessionStorage.getItem('schemes')) || [];
     } 
     
     // removes collection from storage
     function removeStorage() {
-
+        sessionStorage.removeItem('schemes');
     }    
     
     // add html for each scheme to rows in scheme group
@@ -90,9 +90,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }            
             // add schemem to collection array
             schemeCollection.push(scheme);
+            
             // update storage with revised collection
-
-           
+            updateStorage();
+            
             // tell scheme collection to update its display
             updateSchemePreviews();
         });
@@ -101,10 +102,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // defines handler for Remove All Schemes button
     function setupRemoveAllHandler() {
         document.querySelector('button#btnRemoveAll').addEventListener('click', (e) => {
-            // empty the scheme collection
-            
-            // update local storage and update preview display
-            
+        // empty the scheme collection
+        schemeCollection = [];
+
+        // update local storage and update preview display
+        removeStorage();
             updateSchemePreviews();                            
         });
     } 

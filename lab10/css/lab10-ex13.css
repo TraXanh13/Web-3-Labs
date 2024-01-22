@@ -1,6 +1,8 @@
 body {
-    font-family: Open Sans, sans-serif;
-    background-color: #E6DDDE;
-
+	font-family: Open Sans, sans-serif;
+	background-color: #e6ddde;
 }
 
+#map {
+	height: 600px;
+}

@@ -10,5 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "A sample api to help learn Node"
+  },
+  "keywords": [
+    "stocks-api.js"
+  ]
 }

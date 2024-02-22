@@ -9,13 +9,13 @@ app.use(express.urlencoded({ extended: true }));
 // handle requests for static resources
 app.use('/static', express.static(path.join(__dirname,'public')));
 // Require the upload middleware
-const upload = require('./scripts/uploader.js');
+// const upload = require('./scripts/uploader.js');
 
-// Set up a route for file uploads
-app.post('/uploader', upload.single('fileElem'), (req, res) => {
-  // Handle the uploaded file
-  res.json({ message: 'File uploaded successfully!' });
-});
+// // Set up a route for file uploads
+// app.post('/uploader', upload.single('fileElem'), (req, res) => {
+//   // Handle the uploaded file
+//   res.json({ message: 'File uploaded successfully!' });
+// });
 
 // set up route handling
 const router = require('./scripts/stock-router.js');

@@ -9,9 +9,17 @@ const jsonMessage = (msg) => {
 };
 
 const handleCurlTest = (app) => {
+   app.post('/test', (req,resp) => {
+      resp.send(req.body);
+   });
 
+   app.put('/test', (req,resp) => {
+      resp.json(req.body);
+   });
 
-
+   app.delete('/test', (req,resp) => {
+      resp.send('<html><em>Delete Tested</em></html>')
+   });
 };
 
 

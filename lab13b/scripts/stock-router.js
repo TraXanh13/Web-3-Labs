@@ -44,7 +44,21 @@ const handleSingleSymbol = (app) => {
       }
    });
 
-
+   // PUT request: Update specified stock using provided data
+   app.put('/stock/:symbol', (req,resp) => {
+      const symbolToUpd = req.params.symbol.toUpperCase();
+      // find index for stock with this symbol
+      let indx = stocks.findIndex(s => s.symbol === symbolToUpd);
+      // if didn't find it, then return message
+      if (indx < 0) {
+         resp.json(jsonMessage(`${symbolToUpd} not found`));
+      } else {
+         // symbol found, so replace its value with form values
+         stocks[indx] = req.body;
+         // let requestor know it worked
+         resp.json(jsonMessage(`${symbolToUpd} updated`));
+      }
+   });
 };
 // return all the stocks whose name contains the supplied text
 const handleNameSearch = (app) => {

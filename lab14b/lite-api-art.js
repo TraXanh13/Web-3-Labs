@@ -2,6 +2,19 @@
 const express = require("express");
 const app = express();
 
+app.use(express.json());
+const provider = require('./scripts/painting-provider.js');
+
+// root endpoint will retrieve all paintings
+app.get("/", (req, resp) => {
+  provider.retrievePaintings(req, resp);
+});
+
+// this endpoint will retrieve single painting
+app.get("/:id", (req, resp) => {
+  provider.retrieveSinglePainting(req, resp);
+});
+
 
 
 // Default response for any other request

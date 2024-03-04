@@ -2,7 +2,9 @@ import CompanyLogo from './CompanyLogo.jsx';
 
 const Company = (props) => {
 
-
+  const edit = () => {
+    alert("Now editing " + props.data.name);
+  };
 
    const renderNormal = () => {
       return (
@@ -15,7 +17,7 @@ const Company = (props) => {
                <p><strong>HQ:</strong> {props.data.hq}</p>
            </div>
            <div className="media-right">
-             <button className="button is-link" >Edit</button>
+             <button className="button is-link" onClick={edit} >Edit</button>
            </div>                     
          </article>
        );

@@ -1,17 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import HeaderApp from "./componenets/HeaderApp"
+import Company from './componenets/Company.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const comps =     
+    [
+      {name: "FaceBook", symbol: "FB", 
+        sector: "Internet Software", 
+        hq: "Menlo Park, California"},
+      {name: "Alphabet Inc Class A", symbol: "GOOG", 
+        sector: "Information Technology", 
+        hq: "Mountain View, California"},
+      {name: "Apple", symbol: "AAPL", 
+        sector: "Information Technology", 
+        hq: "Cupertino, California"},
+      {name: "AT&T", symbol: "T", 
+        sector: "Telecommunications Services", 
+        hq: "Dallas, Texas"}
+    ];
 
   return (
-    <main>
-      <HeaderApp />
-    </main>
-  )
+    <section  className="content box">
+    { comps.map( (c,indx) => <Company data={c} key={indx}/>)  }
+    </section>
+  );
+
 }
 
 export default App

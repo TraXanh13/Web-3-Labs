@@ -1,4 +1,5 @@
 import Company from './componenets/Company.jsx';
+import {useState} from 'react';
 
 function App() {
 
@@ -18,11 +19,22 @@ function App() {
         hq: "Dallas, Texas"}
     ];
 
-  return (
-    <section  className="content box">
-    { comps.map( (c,indx) => <Company data={c} key={indx}/>)  }
-    </section>
-  );
+    const [change, setChange] = useState(0);
+    const handler = () => {
+      let temp = change + 1;
+      setChange(temp);
+      comps[0].name = temp;
+      console.log(comps[0].name);
+    }
+    console.log("**** App render change="+change+" "+comps[0].name);
+  
+    return (
+      <section  className="content box">
+        { comps.map( (c,indx) => <Company data={c} key={indx}/>)  }
+        <button className="button is-success" onClick={handler}>
+          Change = {change}</button>
+      </section>
+    );
 
 }
 

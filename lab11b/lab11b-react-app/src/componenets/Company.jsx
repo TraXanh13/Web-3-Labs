@@ -7,6 +7,7 @@ const Company = (props) => {
   const edit = () => {
     setEditing(true);
   };
+
   const save = () => {
     setEditing(false);
     let temp = count +1;
@@ -52,7 +53,7 @@ const Company = (props) => {
         <article className="box media ">
           <CompanyLogo symbol={props.data.symbol} />
           <div className="media-content">
-              <h2>{props.data.name}</h2>
+              <h2>{props.data.name} {count}</h2>
               <p><strong>Symbol:</strong> {props.data.symbol}</p>
               <p><strong>Sector:</strong> {props.data.sector}</p>
               <p><strong>HQ:</strong> {props.data.hq}</p>

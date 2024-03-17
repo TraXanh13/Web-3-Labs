@@ -1,6 +1,7 @@
 import {useState} from 'react';
-import Company from './componenets/Company.jsx';
-import ControlledForm from './componenets/ControlledForm.jsx';
+// import Company from './componenets/Company.jsx';
+// import ControlledForm from './componenets/ControlledForm.jsx';
+import UncontrolledForm from './componenets/UncontrolledForm';
 
 function App() {
 
@@ -34,17 +35,18 @@ function App() {
     }
 
   console.log("**** App render change="+change+" "+comps[0].name);
-  return (
-    <section className="content box">
-      <ControlledForm/>
-      <button className="button is-success" onClick={handler}>
-      Change = {change}</button>
-      { comps.map( (c,indx) => <Company data={c} key={indx}/>)  }
-    </section>
-  );
+  // return (
+  //   <section className="content box">
+  //     <ControlledForm/>
+  //     <button className="button is-success" onClick={handler}>
+  //     Change = {change}</button>
+  //     { comps.map( (c,indx) => <Company data={c} key={indx}/>)  }
+  //   </section>
+  // );
   
   // return(<ControlledForm/>)
 
+  return <UncontrolledForm />;
 }
 
 export default App

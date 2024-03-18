@@ -1,4 +1,8 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
 	--list-back: #2b7a78;
 	--favorites-back: #def2f1;
 	--details-back: #feffff;
@@ -175,4 +179,4 @@ legend {
 .banner div {
 	display: inline-block;
 	margin-top: 200px;
-}
+} */

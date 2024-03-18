@@ -1,7 +1,8 @@
 import {useState} from 'react';
 // import Company from './componenets/Company.jsx';
 // import ControlledForm from './componenets/ControlledForm.jsx';
-import UncontrolledForm from './componenets/UncontrolledForm';
+// import UncontrolledForm from './componenets/UncontrolledForm';
+import TransferLists from './componenets/TransferLists';
 
 function App() {
 
@@ -46,7 +47,9 @@ function App() {
   
   // return(<ControlledForm/>)
 
-  return <UncontrolledForm />;
+  // return <UncontrolledForm />;
+
+  return <TransferLists />
 }
 
 export default App

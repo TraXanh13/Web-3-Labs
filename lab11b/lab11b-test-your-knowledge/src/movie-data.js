@@ -1,4 +1,3 @@
-
 const movieData = [
     {   id: 128, title: "Past Lives", tagline: "Love and Destiny",
         poster: "/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg", runtime: 106, tmdbID: 666277
@@ -46,3 +45,5 @@ const movieData = [
         poster: "/zwzWCmH72OSC9NA0ipoqw5Zjya8.jpg", runtime: 135, tmdbID: 453
     }
 ];
+
+export default movieData;

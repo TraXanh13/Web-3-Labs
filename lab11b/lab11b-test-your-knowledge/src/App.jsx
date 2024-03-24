@@ -1,35 +1,42 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './components/Header'
+import MovieList from './components/MovieList'
+import Movies from './movie-data.js'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const movies = Movies;
+  const [favMovies, setFavMovies] = useState([]);
+
+  const addFav = (e) => {
+    let currFav = [...favMovies];
+    let movie = movies.find(m => m.id == e.target.value)
+
+    if(!movie){
+      alert("Movie is not ready...\nPlease wait a moment")
+      return
+    }
+
+    if(!currFav.find(m => m.id == movie.id)){
+      currFav.push(movie);
+      setFavMovies(currFav);
+    } else{
+      let index = currFav.map(m => m.id).indexOf(movie.id);
+      currFav.splice(index, 1);
+      setFavMovies(currFav)
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main className="section">
+      <article className="container">
+        <Header favMovies={favMovies}/>
+        <MovieList movies={movies} addFavMovie={addFav}/>
+      </article>
+    </main>
+  );
 }
 
 export default App

@@ -40,7 +40,7 @@ const CompanyForm = (props) => {
 
                       <div className="md:col-span-3">
                         <label htmlFor="hq">HQ</label>
-                        <input type="text" name="hq" value={props.data.hq} onChange={handleChange} className="h-10 border mt-1 rounded px-4 w-full text-gray-600 bg-gray-50" />
+                        <input type="text" name="hq" value={props.data.address} onChange={handleChange} className="h-10 border mt-1 rounded px-4 w-full text-gray-600 bg-gray-50" />
                       </div>
 
                       <div className="md:col-span-2">

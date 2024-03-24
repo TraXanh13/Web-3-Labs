@@ -7,12 +7,11 @@ import Movies from './movie-data.js'
 
 
 function App() {
-  const movies = Movies;
+  const [movies, setMovies] = useState(Movies);
   const [favMovies, setFavMovies] = useState([]);
 
-  const addFav = (e) => {
+  const addFav = (movie) => {
     let currFav = [...favMovies];
-    let movie = movies.find(m => m.id == e.target.value)
 
     if(!movie){
       alert("Movie is not ready...\nPlease wait a moment")

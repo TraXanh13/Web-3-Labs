@@ -1,6 +1,14 @@
 /* eslint-disable react/prop-types */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+
+
 const SingleMovie = (props) => {
     const movieImg = "https://image.tmdb.org/t/p/w342" + props.movie.poster;
+
+    const handleAddMovie = () => {
+        props.addFavMovie(props.movie)
+    }
 
     return(
         <li className="column is-one-fifth-desktop is-half-tablet">
@@ -17,10 +25,8 @@ const SingleMovie = (props) => {
                     </div>
 
                     <footer className="card-footer">
-                        <button className="button card-footer-item" value={props.movie.id} onClick={props.addFavMovie}>
-                            <span className="icon is-small">
-                                <i className="fas fa-heart">❤️</i>
-                            </span>
+                        <button className="button card-footer-item" onClick={handleAddMovie}>
+                                <FontAwesomeIcon className="icon is-small" icon={faHeart} />
                         </button>  
                     </footer>
             </div>

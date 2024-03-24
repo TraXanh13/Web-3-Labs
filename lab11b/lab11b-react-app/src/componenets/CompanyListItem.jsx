@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import editIcon from '../assets/pencil.svg';
 
 const CompanyListItem = (props) => {
 	const handleClick = () => {
-		alert("You clicked " + props.company.symbol);
+		props.changeCompany(props.company.symbol);
 	}
 
 	return (

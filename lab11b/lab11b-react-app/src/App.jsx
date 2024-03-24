@@ -2,7 +2,8 @@ import {useState} from 'react';
 // import Company from './componenets/Company.jsx';
 // import ControlledForm from './componenets/ControlledForm.jsx';
 // import UncontrolledForm from './componenets/UncontrolledForm';
-import TransferLists from './componenets/TransferLists';
+// import TransferLists from './componenets/TransferLists';
+import CompanyBrowser from './componenets/CompanyBrowser.jsx';
 
 function App() {
 
@@ -51,11 +52,12 @@ function App() {
 
   // return <TransferLists />
 
-  return (
-    <h1 className="text-3xl font-bold text-yellow-600 m-4">
-    Hello world!
-    </h1>
-  );
+  // return (
+  //   <h1 className="text-3xl font-bold text-yellow-600 m-4">
+  //   Hello world!
+  //   </h1>
+  // );
+  return <CompanyBrowser />
 }
 
 export default App
